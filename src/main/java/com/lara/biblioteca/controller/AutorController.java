@@ -29,8 +29,8 @@ public class AutorController {
  
 @PostMapping
 public AutorEntity criar(@RequestBody AutorRequestDTO dto ){
-   AutorEntity autor = service.criar(dto);
-   return autor;
+   AutorEntity criado = service.criar(dto);
+   return criado;
   }
 
  @PatchMapping("/{id}")
