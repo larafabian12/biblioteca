@@ -26,6 +26,12 @@ public class AutorController {
   List<AutorEntity> autores = service.listar();
   return autores;
  }
+ @GetMapping("/{id}")
+ public AutorEntity detalhar(@PathVariable Integer id){
+AutorEntity autor = service.detalhar(id);
+
+return autor;
+ }
  
 @PostMapping
 public AutorEntity criar(@RequestBody AutorRequestDTO dto ){
@@ -38,6 +44,7 @@ public AutorEntity criar(@RequestBody AutorRequestDTO dto ){
   AutorEntity alterado = service.alterar(id, dto);
   return alterado;
  }
+
 }
 
 
